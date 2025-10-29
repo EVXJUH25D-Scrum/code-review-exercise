@@ -6,6 +6,7 @@ import me.code.services.ITodoService;
 
 import java.util.stream.Stream;
 
+@CommandInfo(order = 2)
 public class ListTodosCommand extends Command {
 
     public ListTodosCommand(ITodoService todoService) {

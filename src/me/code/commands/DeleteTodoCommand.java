@@ -7,6 +7,7 @@ import me.code.utility.CommandHelper;
 
 import java.util.UUID;
 
+@CommandInfo(order = 6)
 public class DeleteTodoCommand extends Command {
 
     public DeleteTodoCommand(ITodoService todoService) {

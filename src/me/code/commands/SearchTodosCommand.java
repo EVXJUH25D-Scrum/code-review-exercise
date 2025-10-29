@@ -7,6 +7,7 @@ import me.code.services.ITodoService;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
+@CommandInfo(order = 3)
 public class SearchTodosCommand extends Command {
 
     public SearchTodosCommand(ITodoService todoService) {

@@ -8,6 +8,7 @@ import me.code.utility.CommandHelper;
 
 import java.util.UUID;
 
+@CommandInfo(order = 4)
 public class StartTodoCommand extends Command {
 
     public StartTodoCommand(ITodoService todoService) {

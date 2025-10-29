@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+@CommandInfo(order = 1)
 public class CreateTodoCommand extends Command {
 
     public CreateTodoCommand(ITodoService todoService) {
