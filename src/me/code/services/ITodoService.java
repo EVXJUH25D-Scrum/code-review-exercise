@@ -3,6 +3,7 @@ package me.code.services;
 import me.code.models.Todo;
 import me.code.models.TodoStatus;
 
+import java.util.List;
 import java.util.UUID;
 import java.util.stream.Stream;
 
@@ -78,4 +79,21 @@ public interface ITodoService {
      * @throws Exception Om något går fel vid sökning
      */
     Stream<Todo> searchTodos(String query) throws Exception;
+
+    /**
+     * Räknar antalet todos för en specifik status.
+     *
+     * @param status Status att räkna (PENDING, IN_PROGRESS, eller COMPLETED)
+     * @return Antal todos med given status
+     * @throws Exception Om något går fel vid räkning
+     */
+    int countTodosByStatus(TodoStatus status) throws Exception;
+
+    /**
+     * Hämtar alla unika kategorier som finns bland todos.
+     *
+     * @return En lista med unika kategorinamn
+     * @throws Exception Om något går fel vid hämtning
+     */
+    List<String> getAllCategories() throws Exception;
 }
