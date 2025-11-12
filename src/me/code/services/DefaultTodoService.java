@@ -123,4 +123,31 @@ public class DefaultTodoService implements ITodoService {
                 // Sortera alfabetiskt (case-insensitive)
                 .sorted((a, b) -> a.getTitle().compareToIgnoreCase(b.getTitle()));
     }
+
+    /**
+     * Räknar antalet todos för en specifik status.
+     *
+     * Vi använder Stream API:et för att filtrera och räkna todos.
+     */
+    @Override
+    public int countTodosByStatus(TodoStatus status) throws Exception {
+        return (int) getTodos()
+                .filter(todo -> todo.getStatus() == status)
+                .count();
+    }
+
+    /**
+     * Hämtar alla unika kategorier som finns bland todos.
+     *
+     * Vi använder Stream API:et för att extrahera alla kategorier och
+     * sedan filtrera bort duplicates.
+     */
+    @Override
+    public List<String> getAllCategories() throws Exception {
+        return getTodos()
+                .map(todo -> todo.getCategory())
+                .distinct()
+                .sorted()
+                .toList();
+    }
 }
