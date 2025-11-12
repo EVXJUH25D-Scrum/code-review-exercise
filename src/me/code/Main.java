@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 
 public class Main {
 
+    // LÅTSAS ÄNDRING!
     /*
 
     1. Skapa todos (som sparas)
